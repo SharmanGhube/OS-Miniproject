@@ -1,0 +1,223 @@
+.lab {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+.stage {
+  position: relative;
+  height: min(58vh, 580px);
+  min-height: 340px;
+}
+
+.stageOverlay {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.stageOverlay > * {
+  pointer-events: auto;
+  box-shadow: 0 6px 20px rgb(47 43 58 / 0.08);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  gap: 8px;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 12px;
+  background: var(--c-bg);
+  border: 1px solid var(--c-line);
+}
+
+.tabs button {
+  flex: 1;
+  border: 0;
+  background: transparent;
+  padding: 6px 8px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--c-inkSoft);
+}
+
+.tabs .on {
+  background: var(--c-ink);
+  color: var(--c-bg);
+}
+
+.textInput {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid var(--c-line);
+  background: var(--c-surface);
+  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-size: 13px;
+}
+
+.note {
+  margin: 0;
+  color: var(--c-inkSoft);
+  font-size: 13px;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+/* textbook-style tables */
+.table {
+  border-collapse: collapse;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 5px 8px;
+  border-bottom: 1px solid var(--c-line);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table th {
+  color: var(--c-inkSoft);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.table td:first-child,
+.table th:first-child {
+  text-align: left;
+}
+
+.table tfoot td {
+  font-weight: 700;
+  border-bottom: 0;
+}
+
+.colNow {
+  background: color-mix(in srgb, var(--c-accent) 14%, white);
+}
+
+.cellFault {
+  color: #c4473a;
+  font-weight: 700;
+}
+
+.cellHit {
+  color: #3d8a5c;
+  font-weight: 700;
+}
+
+.cellNew {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--c-fault);
+  text-underline-offset: 3px;
+}
+
+.rowNow {
+  background: color-mix(in srgb, var(--c-accent) 14%, white);
+}
+
+.rowOk {
+  background: color-mix(in srgb, var(--c-hit) 18%, white);
+}
+
+.matrix input {
+  width: 42px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--c-line);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.matrix td {
+  padding: 3px 4px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  margin-right: 6px;
+  vertical-align: -1px;
+}
+
+.iconBtn {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: var(--c-inkSoft);
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+.iconBtn:hover {
+  background: var(--c-bg);
+  color: var(--c-ink);
+}
+
+@media (max-width: 1000px) {
+  .lab,
+  .two {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .stage {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    min-height: 280px;
+  }
+}

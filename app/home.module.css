@@ -1,0 +1,158 @@
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: center;
+  margin: 12px 0 28px;
+}
+
+.copy h1 {
+  font-size: clamp(32px, 4.4vw, 54px);
+  letter-spacing: -0.03em;
+  margin: 10px 0 14px;
+}
+
+.copy p {
+  font-size: 16px;
+  color: var(--c-inkSoft);
+  max-width: 52ch;
+  margin: 0;
+}
+
+.kicker {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--c-inkSoft);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.12s;
+}
+
+.primary {
+  background: var(--c-ink);
+  color: var(--c-bg);
+}
+
+.secondary {
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: translateY(-1px);
+}
+
+.heroStage {
+  height: clamp(280px, 38vw, 440px);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-line);
+  text-decoration: none;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.card:hover {
+  border-color: var(--c-inkSoft);
+  transform: translateY(-2px);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.card small {
+  color: var(--c-inkSoft);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.card p {
+  margin: 6px 0 12px;
+  color: var(--c-inkSoft);
+  flex: 1;
+}
+
+.dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  transform: rotate(45deg) scale(0.8);
+}
+
+.go {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.soon {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px dashed var(--c-line);
+}
+
+.soon h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-inkSoft);
+}
+
+.soon ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--c-inkSoft);
+}
+
+.footer {
+  margin-top: 28px;
+  color: var(--c-inkSoft);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

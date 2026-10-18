@@ -1,0 +1,33 @@
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 50% 0%, #fbf9f4 0%, var(--c-bg) 55%, var(--c-bgDeep) 100%);
+  border: 1px solid var(--c-line);
+  touch-action: none;
+}
+
+.fallback {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 24px;
+  color: var(--c-inkSoft);
+  text-align: center;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  min-height: 280px;
+  border-radius: 18px;
+  border: 1px solid var(--c-line);
+  background: var(--c-bg);
+  color: var(--c-inkSoft);
+  font-size: 14px;
+}
